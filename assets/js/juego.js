@@ -24,7 +24,6 @@
     }
 
     deck = _.shuffle(deck);
-    console.log(deck);
 
     return deck
  }
@@ -38,9 +37,15 @@
     }
 
     const carta = deck.pop();
-    
-    console.log(carta);
-    console.log(deck);
+
+    return carta;
  }
 
-//  pedirCarta();
+ //Función para asignar valor a carta
+const valorCarta = ( carta ) => {
+    const valor = carta.substring(0, carta.length - 1);
+    
+    return ( isNaN(valor) ) ? 
+        ( valor === 'A' ) ? 11 : 10
+        : valor * 1;
+}

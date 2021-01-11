@@ -78,7 +78,7 @@ const miModulo = (() => {
     const mostrarCarta = (carta, turno) => {
         const imgCarta = document.createElement('img');
         imgCarta.src = `assets/cartas/${ carta }.png`;
-        imgCarta.classList.add('w-40', '-ml-28');
+        imgCarta.classList.add('w-40', '-ml-28', 'animate__animated', 'animate__fadeIn');
         divCartasJugadores[turno].append(imgCarta);
     }
 

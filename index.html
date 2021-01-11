@@ -3,40 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blackjack</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<title>Blackjack - TailwindCSS</title>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
 </head>
 <body>
-	<header class="titulo">
-		Blackjack
+	<header class="bg-black p-3	text-center text-white text-3xl	font-bold tracking-wider">
+		Blackjack - TailwindCSS
 	</header>
 
-	<div class="row mt-2">
-		<div id="divBotones" class="col text-center">
-			<button id="btnNuevo" class="btn btn-danger">Nuevo Juego</button>
-			<button id="btnPedir" disabled="disabled" class="btn btn-primary">Pedir carta</button>
-			<button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
-		</div>
+	<div id="divBotones" class="flex">
+		<button id="btnNuevo" class="focus:outline-none flex-1 bg-green-600 hover:bg-green-800 text-lg text-white font-bold leading-tight p-2">Nuevo Juego</button>
+		<button id="btnPedir" disabled="disabled" class="focus:outline-none flex-1 bg-blue-600 hover:bg-blue-800 text-white font-bold text-lg p-2">Pedir carta</button>
+		<button id="btnDetener" disabled="disabled" class="focus:outline-none flex-1 bg-red-700 hover:bg-red-800 text-white font-bold text-lg p-2">Detener</button>
 	</div>
 
-	<div class="row container">
-		<div class="col">
-			<h1>Jugador 1 - <small>0</small></h1>
-			<div id="jugador-cartas" class="divCartas">
+	<div class="jugadores flex flex-col">
+		<div class="mt-10">
+			<h1 class="text-center text-xl font-bold">Jugador 1 - <small class="text-yellow-700">0</small></h1>
+			<div id="jugador-cartas" class="divCartas mt-2 flex flex-row pl-28">
 			</div>
 		</div>
-	</div>
-
-	<div class="row container mt-2">
-		<div class="col">
-			<h1>Computadora - <small>0</small></h1>
-			<div id="computadora-cartas" class="divCartas">
+		<div class="mt-10">
+			<h1 class="text-center text-xl font-bold">Computadora - <small class="text-yellow-700">0</small></h1>
+			<div id="computadora-cartas" class="divCartas flex flex-row pl-28">
 			</div>
 		</div>
 	</div>
 
 	<script src="assets/js/underscore-min.js"></script>
-	<script src="assets/js/juego-min.js"></script>
+	<script src="assets/js/juego.js"></script>
 </body>
 </html>
